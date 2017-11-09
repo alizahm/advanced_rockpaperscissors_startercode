@@ -23,7 +23,11 @@
 
 
 //FUNCTIONS
-
+$("button").click(function(){    
+   var choice = $("input"),val();
+   $("").append(choice);
+     
+});
 
 
 // DOCUMENT READY FUNCTION
