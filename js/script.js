@@ -1,3 +1,4 @@
+/*global $*/
 //Class 1:
         // Fork and clone the repo and set up your project workspace and link files
         // Write HTML for your project
@@ -13,10 +14,12 @@
         // Compare the user choice and the computer choice to determine who won. 
         // Display the user winner to the output screen 
         // Clear the input box for the next choice
-
 // *************************** YOUR CODE BELOW *******************************
 //******************TEST EARLY AND OFTEN USING console.log() ******************
 //****************** SERIOUSLY TEST USING console.log()!!! ******************
+// DOCUMENT READY FUNCTION
+$(document).ready(function(){
+   // code must be inside this function!
 
 //GLOBAL VARIABLES
 
@@ -24,11 +27,12 @@
 
 //FUNCTIONS
 $("button").click(function(){    
-   var choice = $("input"),val();
-   $("").append(choice);
-     
+   var userChoice = $("#user-choice").val();
+   //$("").append(choice);
 });
 
+var userChoice = ["rock", "paper", "scissors"];
 
-// DOCUMENT READY FUNCTION
 
+
+});
