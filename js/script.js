@@ -26,12 +26,22 @@ $(document).ready(function(){
 
 
 //FUNCTIONS
-$("button").click(function(){    
-   var userChoice = $("#user-choice").val();
-   //$("").append(choice);
-});
 
-var userChoice = ["rock", "paper", "scissors"];
+    //$("#user-button").click(function(){    
+     // var userChoice = $("#user-choice").val();
+        //$("").append(choice);
+    //});
+
+ alert("hi");
+    $("#computer-button").click(function(){
+        alert("hi");
+      var computerChoice = ["rock", "paper", "scissors"];
+      var computerAnswer = Math.floor(Math.random()*computerChoice.length);
+        console.log(computerChoice[computerAnswer]);
+    });
+
+
+
 
 
 
