@@ -27,20 +27,34 @@ $(document).ready(function(){
 
 //FUNCTIONS
 
-    //$("#user-button").click(function(){    
-     // var userChoice = $("#user-choice").val();
-        //$("").append(choice);
-    //});
+$("#user-button").click(function(){    
 
- alert("hi");
-    $("#computer-button").click(function(){
-        alert("hi");
-      var computerChoice = ["rock", "paper", "scissors"];
-      var computerAnswer = Math.floor(Math.random()*computerChoice.length);
-        console.log(computerChoice[computerAnswer]);
-    });
-
-
+    var computerChoice = ["rock", "paper", "scissors"];
+    var computerAnswer = Math.floor(Math.random()*computerChoice.length);
+    console.log(computerChoice[computerAnswer]);
+    var userChoice = $("#user-choice").val();
+    var computerResult = computerChoice[computerAnswer];
+    
+    var winnerText = "not sure yet";
+  
+    if((userChoice === "rock" && computerResult === "rock") || 
+       (userChoice === "paper" && computerResult === "paper") || 
+       (userChoice === "scissors" && computerResult === "scissors")){
+        winnerText = "It's a tie!";
+    } else if
+       ((userChoice === "paper" && computerResult === "rock") ||
+       (userChoice === "scissors" && computerResult === "paper") ||
+       (userChoice === "rock" && computerResult === "scissors")) {
+        winnerText = "You Win!";
+    } else if
+      ((userChoice === "paper" && computerResult === "scissors") ||
+       (userChoice === "scissors" && computerResult === "rock") ||
+       (userChoice === "rock" && computerResult === "paper")) {
+        winnerText = "Computer Wins!";
+    }
+    
+    $("#winner").text(winnerText);
+  });
 
 
 
